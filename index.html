@@ -84,8 +84,6 @@
                 max(30px, env(safe-area-inset-bottom));
         }
 
-        /* HEADER */
-
         .header {
             position: relative;
             background: var(--white);
@@ -137,8 +135,6 @@
             font-size: 20px;
         }
 
-        /* VIEWS */
-
         .view {
             display: none;
         }
@@ -160,8 +156,6 @@
             }
         }
 
-        /* PANEL */
-
         .panel {
             background: var(--white);
             border-radius: 24px;
@@ -182,8 +176,6 @@
             line-height: 1.45;
             margin-bottom: 22px;
         }
-
-        /* SPRACHEN */
 
         .language-grid {
             display: grid;
@@ -221,8 +213,6 @@
             font-size: 18px;
             font-weight: 700;
         }
-
-        /* STARTSEITE */
 
         .intro {
             text-align: center;
@@ -299,8 +289,6 @@
             font-weight: 700;
         }
 
-        /* PROBLEM BESTÄTIGEN */
-
         .problem-big-icon {
             font-size: 54px;
             text-align: center;
@@ -371,8 +359,6 @@
             transform: scale(.985);
         }
 
-        /* LÖSUNGEN */
-
         .solution-title {
             text-align: center;
             font-size: 27px;
@@ -408,8 +394,6 @@
             margin-top: 24px;
             padding-top: 24px;
         }
-
-        /* RÜCKRUF */
 
         .callback-notice {
             background: var(--yellow);
@@ -476,8 +460,6 @@
             margin-top: 2px;
         }
 
-        /* ERFOLG */
-
         .success {
             text-align: center;
             padding: 20px 0;
@@ -501,8 +483,6 @@
             margin-bottom: 22px;
         }
 
-        /* FOOTER */
-
         .footer {
             text-align: center;
             color: var(--grey);
@@ -519,8 +499,6 @@
             cursor: pointer;
             margin: 5px;
         }
-
-        /* MODAL */
 
         .modal {
             display: none;
@@ -626,12 +604,8 @@
         </button>
     </header>
 
-
-    <!-- SPRACHE -->
     <section id="languageView" class="view active">
-
         <div class="panel">
-
             <h2 class="panel-title">Wähle deine Sprache</h2>
             <p class="panel-subtitle">Choose your language</p>
 
@@ -659,11 +633,8 @@
 
             </div>
         </div>
-
     </section>
 
-
-    <!-- START -->
     <section id="homeView" class="view">
 
         <div class="intro">
@@ -675,8 +646,6 @@
 
     </section>
 
-
-    <!-- PROBLEM BESTÄTIGEN -->
     <section id="confirmView" class="view">
 
         <div class="panel">
@@ -718,8 +687,6 @@
 
     </section>
 
-
-    <!-- LÖSUNG -->
     <section id="solutionView" class="view">
 
         <div class="panel">
@@ -762,8 +729,6 @@
 
     </section>
 
-
-    <!-- RÜCKRUF -->
     <section id="callbackView" class="view">
 
         <div class="panel">
@@ -791,7 +756,6 @@
                     >
                 </div>
 
-
                 <div class="form-group">
                     <label for="userPhone" id="phoneLabel">
                         Deine Telefonnummer
@@ -804,7 +768,6 @@
                         required
                     >
                 </div>
-
 
                 <div class="form-group">
                     <label for="userSerial" id="serialLabel">
@@ -819,7 +782,6 @@
                     >
                 </div>
 
-
                 <div class="form-group">
                     <label for="userProblem" id="problemLabel">
                         Beschreib dein Problem kurz
@@ -831,7 +793,6 @@
                         required
                     ></textarea>
                 </div>
-
 
                 <div id="saturdayArea" style="display:none;">
 
@@ -870,7 +831,6 @@
 
                 </div>
 
-
                 <button
                     type="submit"
                     class="big-btn primary"
@@ -886,8 +846,6 @@
 
     </section>
 
-
-    <!-- ERFOLG -->
     <section id="successView" class="view">
 
         <div class="panel success">
@@ -914,7 +872,6 @@
 
     </section>
 
-
     <footer class="footer">
 
         <div id="footerText">
@@ -936,7 +893,6 @@
 </div>
 
 
-<!-- IMPRESSUM -->
 <div id="imprintModal" class="modal">
 
     <div class="modal-content">
@@ -984,7 +940,6 @@
 </div>
 
 
-<!-- DATENSCHUTZ -->
 <div id="privacyModal" class="modal">
 
     <div class="modal-content">
@@ -1766,119 +1721,73 @@
     function applyLanguage() {
         const t = ui[language];
 
-        document
-            .getElementById('headerTitle')
-            .textContent =
+        document.getElementById('headerTitle').textContent =
             t.headerTitle;
 
-        document
-            .getElementById('headerSubtitle')
-            .textContent =
+        document.getElementById('headerSubtitle').textContent =
             t.headerSubtitle;
 
-        document
-            .getElementById('homeTitle')
-            .textContent =
+        document.getElementById('homeTitle').textContent =
             t.homeTitle;
 
-        document
-            .getElementById('homeSubtitle')
-            .textContent =
+        document.getElementById('homeSubtitle').textContent =
             t.homeSubtitle;
 
-        document
-            .getElementById('confirmQuestion')
-            .textContent =
+        document.getElementById('confirmQuestion').textContent =
             t.confirmQuestion;
 
-        document
-            .getElementById('yesProblemButton')
-            .textContent =
+        document.getElementById('yesProblemButton').textContent =
             t.yes;
 
-        document
-            .getElementById('noProblemButton')
-            .textContent =
+        document.getElementById('noProblemButton').textContent =
             t.no;
 
-        document
-            .getElementById('solutionHeader')
-            .textContent =
+        document.getElementById('solutionHeader').textContent =
             t.solution;
 
-        document
-            .getElementById('workedQuestion')
-            .textContent =
+        document.getElementById('workedQuestion').textContent =
             t.worked;
 
-        document
-            .getElementById('workedYesButton')
-            .textContent =
+        document.getElementById('workedYesButton').textContent =
             t.workedYes;
 
-        document
-            .getElementById('workedNoButton')
-            .textContent =
+        document.getElementById('workedNoButton').textContent =
             t.workedNo;
 
-        document
-            .getElementById('callbackTitle')
-            .textContent =
+        document.getElementById('callbackTitle').textContent =
             t.callbackTitle;
 
-        document
-            .getElementById('callbackSubtitle')
-            .textContent =
+        document.getElementById('callbackSubtitle').textContent =
             t.callbackSubtitle;
 
-        document
-            .getElementById('nameLabel')
-            .textContent =
+        document.getElementById('nameLabel').textContent =
             t.name;
 
-        document
-            .getElementById('phoneLabel')
-            .textContent =
+        document.getElementById('phoneLabel').textContent =
             t.phone;
 
-        document
-            .getElementById('serialLabel')
-            .textContent =
+        document.getElementById('serialLabel').textContent =
             t.serial;
 
-        document
-            .getElementById('problemLabel')
-            .textContent =
+        document.getElementById('problemLabel').textContent =
             t.problem;
 
-        document
-            .getElementById('saturdayNotice')
-            .textContent =
+        document.getElementById('saturdayNotice').textContent =
             t.saturdayNotice;
 
-        document
-            .getElementById('weekdayOption')
-            .textContent =
+        document.getElementById('weekdayOption').textContent =
             t.weekdayOption;
 
-        document
-            .getElementById('saturdayOption')
-            .textContent =
+        document.getElementById('saturdayOption').textContent =
             t.saturdayOption;
 
-        document
-            .getElementById('sendButton')
-            .textContent =
+        document.getElementById('sendButton').textContent =
             t.send;
 
-        document
-            .getElementById('successHomeButton')
-            .textContent =
+        document.getElementById('successHomeButton').textContent =
             t.home;
 
-        document
-            .getElementById('footerText')
-            .textContent =
+        document.getElementById('footerText').textContent =
             t.footer;
 
         document
@@ -1951,19 +1860,13 @@
         const problem =
             problems[language][key];
 
-        document
-            .getElementById('confirmIcon')
-            .textContent =
+        document.getElementById('confirmIcon').textContent =
             problem.icon;
 
-        document
-            .getElementById('confirmTitle')
-            .textContent =
+        document.getElementById('confirmTitle').textContent =
             problem.title;
 
-        document
-            .getElementById('confirmDescription')
-            .textContent =
+        document.getElementById('confirmDescription').textContent =
             problem.small;
 
         track(
@@ -2062,10 +1965,32 @@
     }
 
 
+    /* =====================================================
+       FIX:
+       JEDER NEUE RÜCKRUF STARTET MIT EINEM FRISCHEN FORMULAR
+    ===================================================== */
+
     function openCallback() {
+        const t =
+            ui[language];
+
         const problem =
             problems[language][currentProblemKey];
 
+        const form =
+            document.getElementById('callbackForm');
+
+        const sendButton =
+            document.getElementById('sendButton');
+
+        /* Alte Formulardaten vollständig löschen */
+        form.reset();
+
+        /* Button nach vorherigem Versand wieder aktivieren */
+        sendButton.disabled = false;
+        sendButton.textContent = t.send;
+
+        /* Aktuelles DAVI-Problem wieder automatisch eintragen */
         document
             .getElementById('userProblem')
             .value =
@@ -2078,12 +2003,6 @@
             isSaturday()
                 ? 'block'
                 : 'none';
-
-        document
-            .querySelectorAll('input[name="urgency"]')
-            .forEach(radio => {
-                radio.checked = false;
-            });
 
         track('callback_form_opened');
 
@@ -2299,19 +2218,13 @@ ${new Date().toLocaleString('de-DE')}
         const t =
             ui[language];
 
-        document
-            .getElementById('successIcon')
-            .textContent =
+        document.getElementById('successIcon').textContent =
             '✅';
 
-        document
-            .getElementById('successTitle')
-            .textContent =
+        document.getElementById('successTitle').textContent =
             t.solvedTitle;
 
-        document
-            .getElementById('successText')
-            .textContent =
+        document.getElementById('successText').textContent =
             t.solvedText;
 
         showView('successView');
@@ -2322,19 +2235,13 @@ ${new Date().toLocaleString('de-DE')}
         const t =
             ui[language];
 
-        document
-            .getElementById('successIcon')
-            .textContent =
+        document.getElementById('successIcon').textContent =
             '📞';
 
-        document
-            .getElementById('successTitle')
-            .textContent =
+        document.getElementById('successTitle').textContent =
             t.callbackSentTitle;
 
-        document
-            .getElementById('successText')
-            .textContent =
+        document.getElementById('successText').textContent =
             urgency === 'saturday'
                 ? t.saturdaySent
                 : t.weekdaySent;
