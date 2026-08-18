@@ -1,0 +1,12 @@
+{
+  "name": "DAVI – DeepUp Support",
+  "short_name": "DAVI",
+  "description": "DeepUp Support für dein Scan Device",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#1DD1A1",
+  "orientation": "portrait",
+  "icons": []
+}
