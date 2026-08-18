@@ -13,7 +13,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="DAVI">
-
     <link rel="apple-touch-icon" href="./davi-icon-192.png">
 
     <!-- Google Analytics -->
@@ -21,7 +20,7 @@
     <script>
         window.dataLayer = window.dataLayer || [];
 
-        function gtag(){
+        function gtag() {
             dataLayer.push(arguments);
         }
 
@@ -42,7 +41,6 @@
             --white: #ffffff;
             --yellow: #fff3cd;
             --yellow-border: #ffc107;
-            --red: #dc3545;
         }
 
         * {
@@ -93,9 +91,8 @@
             background: var(--white);
             border-radius: 24px;
             padding: 22px 18px;
-            box-shadow: 0 5px 20px rgba(44,62,80,.08);
+            box-shadow: 0 5px 20px rgba(44, 62, 80, .08);
             margin-bottom: 18px;
-
             display: flex;
             align-items: center;
             gap: 15px;
@@ -130,20 +127,17 @@
             position: absolute;
             top: 10px;
             right: 10px;
-
             border: 0;
             background: var(--light);
             color: var(--dark);
-
             width: 42px;
             height: 42px;
             border-radius: 50%;
-
             cursor: pointer;
             font-size: 20px;
         }
 
-        /* VIEW */
+        /* VIEWS */
 
         .view {
             display: none;
@@ -166,13 +160,13 @@
             }
         }
 
-        /* CARD */
+        /* PANEL */
 
         .panel {
             background: var(--white);
             border-radius: 24px;
             padding: 22px;
-            box-shadow: 0 5px 20px rgba(44,62,80,.08);
+            box-shadow: 0 5px 20px rgba(44, 62, 80, .08);
         }
 
         .panel-title {
@@ -189,7 +183,7 @@
             margin-bottom: 22px;
         }
 
-        /* LANGUAGES */
+        /* SPRACHEN */
 
         .language-grid {
             display: grid;
@@ -202,24 +196,21 @@
             background: var(--white);
             border-radius: 20px;
             padding: 24px 10px;
-
-            box-shadow: 0 4px 15px rgba(44,62,80,.08);
+            box-shadow: 0 4px 15px rgba(44, 62, 80, .08);
             cursor: pointer;
-
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 7px;
-
             color: var(--dark);
-        }
-
-        .language-choice:active {
-            transform: scale(.98);
         }
 
         .language-choice:hover {
             border-color: var(--green);
+        }
+
+        .language-choice:active {
+            transform: scale(.98);
         }
 
         .flag {
@@ -231,7 +222,7 @@
             font-weight: 700;
         }
 
-        /* PROBLEMS */
+        /* STARTSEITE */
 
         .intro {
             text-align: center;
@@ -257,18 +248,14 @@
         .problem-btn {
             width: 100%;
             min-height: 78px;
-
             display: flex;
             align-items: center;
             gap: 15px;
-
             background: var(--white);
             border: 3px solid transparent;
             border-radius: 20px;
             padding: 15px 17px;
-
-            box-shadow: 0 4px 15px rgba(44,62,80,.08);
-
+            box-shadow: 0 4px 15px rgba(44, 62, 80, .08);
             cursor: pointer;
             text-align: left;
             color: var(--dark);
@@ -312,7 +299,7 @@
             font-weight: 700;
         }
 
-        /* CONFIRM */
+        /* PROBLEM BESTÄTIGEN */
 
         .problem-big-icon {
             font-size: 54px;
@@ -356,10 +343,8 @@
             border: 0;
             border-radius: 18px;
             padding: 15px 18px;
-
             font-size: 18px;
             font-weight: 750;
-
             cursor: pointer;
         }
 
@@ -386,7 +371,7 @@
             transform: scale(.985);
         }
 
-        /* SOLUTIONS */
+        /* LÖSUNGEN */
 
         .solution-title {
             text-align: center;
@@ -424,7 +409,7 @@
             padding-top: 24px;
         }
 
-        /* CALLBACK */
+        /* RÜCKRUF */
 
         .callback-notice {
             background: var(--yellow);
@@ -452,7 +437,6 @@
             border-radius: 14px;
             padding: 15px;
             min-height: 52px;
-
             font-size: 17px;
             color: var(--dark);
         }
@@ -477,12 +461,10 @@
             display: flex;
             align-items: flex-start;
             gap: 12px;
-
             border: 2px solid #dee2e6;
             border-radius: 14px;
             padding: 14px;
             cursor: pointer;
-
             background: var(--white);
         }
 
@@ -494,7 +476,7 @@
             margin-top: 2px;
         }
 
-        /* SUCCESS */
+        /* ERFOLG */
 
         .success {
             text-align: center;
@@ -545,7 +527,7 @@
             position: fixed;
             inset: 0;
             z-index: 1000;
-            background: rgba(0,0,0,.7);
+            background: rgba(0, 0, 0, .7);
             padding: 18px;
             overflow-y: auto;
         }
@@ -650,13 +632,8 @@
 
         <div class="panel">
 
-            <h2 class="panel-title">
-                Wähle deine Sprache
-            </h2>
-
-            <p class="panel-subtitle">
-                Choose your language
-            </p>
+            <h2 class="panel-title">Wähle deine Sprache</h2>
+            <p class="panel-subtitle">Choose your language</p>
 
             <div class="language-grid">
 
@@ -706,20 +683,14 @@
 
             <div class="problem-big-icon" id="confirmIcon"></div>
 
-            <h2
-                class="problem-confirm-title"
-                id="confirmTitle"
-            ></h2>
+            <h2 class="problem-confirm-title" id="confirmTitle"></h2>
 
             <div
                 class="problem-confirm-description"
                 id="confirmDescription"
             ></div>
 
-            <div
-                class="question"
-                id="confirmQuestion"
-            >
+            <div class="question" id="confirmQuestion">
                 Ist das dein Problem?
             </div>
 
@@ -753,21 +724,15 @@
 
         <div class="panel">
 
-            <h2
-                class="solution-title"
-                id="solutionHeader"
-            >
-                Die Lösung
+            <h2 class="solution-title" id="solutionHeader">
+                Die Lösung:
             </h2>
 
             <div id="solutions"></div>
 
             <div class="worked-box">
 
-                <div
-                    class="question"
-                    id="workedQuestion"
-                >
+                <div class="question" id="workedQuestion">
                     Geht es jetzt wieder?
                 </div>
 
@@ -803,28 +768,18 @@
 
         <div class="panel">
 
-            <h2
-                class="panel-title"
-                id="callbackTitle"
-            >
+            <h2 class="panel-title" id="callbackTitle">
                 📞 Rückruf anfordern
             </h2>
 
-            <p
-                class="panel-subtitle"
-                id="callbackSubtitle"
-            >
+            <p class="panel-subtitle" id="callbackSubtitle">
                 Trag deine Daten ein.
             </p>
 
             <form id="callbackForm">
 
                 <div class="form-group">
-
-                    <label
-                        for="userName"
-                        id="nameLabel"
-                    >
+                    <label for="userName" id="nameLabel">
                         Dein Name
                     </label>
 
@@ -834,17 +789,12 @@
                         id="userName"
                         required
                     >
-
                 </div>
 
 
                 <div class="form-group">
-
-                    <label
-                        for="userPhone"
-                        id="phoneLabel"
-                    >
-                        Telefonnummer
+                    <label for="userPhone" id="phoneLabel">
+                        Deine Telefonnummer
                     </label>
 
                     <input
@@ -853,17 +803,12 @@
                         id="userPhone"
                         required
                     >
-
                 </div>
 
 
                 <div class="form-group">
-
-                    <label
-                        for="userSerial"
-                        id="serialLabel"
-                    >
-                        Seriennummer
+                    <label for="userSerial" id="serialLabel">
+                        Seriennummer (SN)
                     </label>
 
                     <input
@@ -872,17 +817,12 @@
                         id="userSerial"
                         required
                     >
-
                 </div>
 
 
                 <div class="form-group">
-
-                    <label
-                        for="userProblem"
-                        id="problemLabel"
-                    >
-                        Was funktioniert nicht?
+                    <label for="userProblem" id="problemLabel">
+                        Beschreib dein Problem kurz
                     </label>
 
                     <textarea
@@ -890,14 +830,10 @@
                         id="userProblem"
                         required
                     ></textarea>
-
                 </div>
 
 
-                <div
-                    id="saturdayArea"
-                    style="display:none;"
-                >
+                <div id="saturdayArea" style="display:none;">
 
                     <div
                         class="callback-notice"
@@ -907,7 +843,6 @@
                     <div class="urgency-options">
 
                         <label class="urgency-option">
-
                             <input
                                 type="radio"
                                 name="urgency"
@@ -915,13 +850,11 @@
                             >
 
                             <span id="weekdayOption">
-                                Nächster Werktag reicht
+                                👍 Nächster Werktag reicht
                             </span>
-
                         </label>
 
                         <label class="urgency-option">
-
                             <input
                                 type="radio"
                                 name="urgency"
@@ -929,9 +862,8 @@
                             >
 
                             <span id="saturdayOption">
-                                Ich brauche heute Hilfe
+                                📞 Ich brauche heute Hilfe
                             </span>
-
                         </label>
 
                     </div>
@@ -945,7 +877,7 @@
                     id="sendButton"
                     style="margin-top:20px;"
                 >
-                    Senden
+                    Rückruf anfordern
                 </button>
 
             </form>
@@ -960,10 +892,7 @@
 
         <div class="panel success">
 
-            <div
-                class="success-icon"
-                id="successIcon"
-            >
+            <div class="success-icon" id="successIcon">
                 ✅
             </div>
 
@@ -1127,11 +1056,6 @@
 
 
 <script>
-
-    /* =====================================================
-       DAVI 3.0
-    ===================================================== */
-
     const WEB3FORMS_KEY =
         '6af2f4a8-bf8e-4f07-b4df-128188635ea2';
 
@@ -1140,7 +1064,6 @@
 
 
     const PDF = {
-
         reboot:
             'https://dikodu.github.io/DAVIbot2.0/Neustart_-_Reboot.pdf',
 
@@ -1152,7 +1075,6 @@
 
         iosUpdate:
             'https://dikodu.github.io/DAVIbot2.0/iOS_Update_2025.pdf'
-
     };
 
 
@@ -1160,849 +1082,603 @@
     let currentProblemKey = null;
 
 
-
-    /* =====================================================
-       ÜBERSETZUNGEN
-    ===================================================== */
-
     const ui = {
-
         de: {
-
-            headerTitle:
-                'Hey! Ich bin DAVI 👋',
-
-            headerSubtitle:
-                'Dein DeepUp Support. Schnell und einfach.',
-
-            homeTitle:
-                'Was funktioniert nicht?',
-
-            homeSubtitle:
-                'Tippe auf dein Problem.',
-
-            confirmQuestion:
-                'Ist das dein Problem?',
-
-            yes:
-                '👍 Ja',
-
-            no:
-                '👎 Nein',
-
-            solution:
-                'Die Lösung:',
-
-            worked:
-                'Geht es jetzt wieder?',
-
-            workedYes:
-                '✅ Ja, funktioniert',
-
-            workedNo:
-                '📞 Nein, ich brauche Hilfe',
-
-            callbackTitle:
-                '📞 Rückruf anfordern',
-
-            callbackSubtitle:
-                'Trag deine Daten ein. Wir helfen dir weiter.',
-
-            name:
-                'Dein Name',
-
-            phone:
-                'Deine Telefonnummer',
-
-            serial:
-                'Seriennummer (SN)',
-
-            problem:
-                'Beschreib dein Problem kurz',
-
+            headerTitle: 'Hey! Ich bin DAVI 👋',
+            headerSubtitle: 'Dein DeepUp Support. Schnell und einfach.',
+            homeTitle: 'Was funktioniert nicht?',
+            homeSubtitle: 'Tippe auf dein Problem.',
+            confirmQuestion: 'Ist das dein Problem?',
+            yes: '👍 Ja',
+            no: '👎 Nein',
+            solution: 'Die Lösung:',
+            worked: 'Geht es jetzt wieder?',
+            workedYes: '✅ Ja, funktioniert',
+            workedNo: '📞 Nein, ich brauche Hilfe',
+            callbackTitle: '📞 Rückruf anfordern',
+            callbackSubtitle: 'Trag deine Daten ein. Wir helfen dir weiter.',
+            name: 'Dein Name',
+            phone: 'Deine Telefonnummer',
+            serial: 'Seriennummer (SN)',
+            problem: 'Beschreib dein Problem kurz',
             saturdayNotice:
                 'Heute ist Samstag. Reicht ein Rückruf am nächsten Werktag oder brauchst du heute Hilfe?',
-
             weekdayOption:
                 '👍 Nächster Werktag reicht',
-
             saturdayOption:
                 '📞 Ich brauche heute Hilfe',
-
-            send:
-                'Rückruf anfordern',
-
-            sending:
-                'Wird gesendet...',
-
-            solvedTitle:
-                'Super! 🎉',
-
-            solvedText:
-                'Schön, dass DAVI dir helfen konnte.',
-
-            callbackSentTitle:
-                'Danke! 👍',
-
+            send: 'Rückruf anfordern',
+            sending: 'Wird gesendet...',
+            solvedTitle: 'Super! 🎉',
+            solvedText: 'Schön, dass DAVI dir helfen konnte.',
+            callbackSentTitle: 'Danke! 👍',
             weekdaySent:
                 'Wir melden uns am nächsten Werktag bei dir.',
-
             saturdaySent:
                 'Der Bereitschaftsdienst meldet sich schnellstmöglich bei dir.',
-
-            home:
-                'Zur Startseite',
-
+            home: 'Zur Startseite',
             footer:
                 '🏗️ DAVI ist 24/7 für dich da – auch am Wochenende.',
-
             fill:
                 'Bitte füll alle Felder aus.',
-
             urgency:
                 'Bitte wähle aus, wann wir dich zurückrufen sollen.',
-
             error:
                 'Das Senden hat nicht funktioniert. Bitte versuch es noch einmal.'
-
         },
-
 
         en: {
-
-            headerTitle:
-                "Hey! I'm DAVI 👋",
-
-            headerSubtitle:
-                'Your DeepUp Support. Fast and easy.',
-
-            homeTitle:
-                "What's not working?",
-
-            homeSubtitle:
-                'Tap your problem.',
-
-            confirmQuestion:
-                'Is this your problem?',
-
-            yes:
-                '👍 Yes',
-
-            no:
-                '👎 No',
-
-            solution:
-                'Solution:',
-
-            worked:
-                'Is it working now?',
-
-            workedYes:
-                '✅ Yes, it works',
-
-            workedNo:
-                '📞 No, I need help',
-
-            callbackTitle:
-                '📞 Request a callback',
-
+            headerTitle: "Hey! I'm DAVI 👋",
+            headerSubtitle: 'Your DeepUp Support. Fast and easy.',
+            homeTitle: "What's not working?",
+            homeSubtitle: 'Tap your problem.',
+            confirmQuestion: 'Is this your problem?',
+            yes: '👍 Yes',
+            no: '👎 No',
+            solution: 'Solution:',
+            worked: 'Is it working now?',
+            workedYes: '✅ Yes, it works',
+            workedNo: '📞 No, I need help',
+            callbackTitle: '📞 Request a callback',
             callbackSubtitle:
                 'Enter your details and we will help you.',
-
-            name:
-                'Your name',
-
-            phone:
-                'Your phone number',
-
-            serial:
-                'Serial number (SN)',
-
-            problem:
-                'Describe your problem',
-
+            name: 'Your name',
+            phone: 'Your phone number',
+            serial: 'Serial number (SN)',
+            problem: 'Describe your problem',
             saturdayNotice:
                 'Today is Saturday. Can the callback wait until the next business day or do you need help today?',
-
             weekdayOption:
                 '👍 Next business day is fine',
-
             saturdayOption:
                 '📞 I need help today',
-
-            send:
-                'Request callback',
-
-            sending:
-                'Sending...',
-
-            solvedTitle:
-                'Great! 🎉',
-
+            send: 'Request callback',
+            sending: 'Sending...',
+            solvedTitle: 'Great! 🎉',
             solvedText:
                 'Glad DAVI could help you.',
-
             callbackSentTitle:
                 'Thank you! 👍',
-
             weekdaySent:
                 'We will contact you on the next business day.',
-
             saturdaySent:
                 'Our on-call service will contact you as soon as possible.',
-
-            home:
-                'Back to start',
-
+            home: 'Back to start',
             footer:
                 '🏗️ DAVI is available 24/7 – including weekends.',
-
             fill:
                 'Please complete all fields.',
-
             urgency:
                 'Please choose when we should call you.',
-
             error:
                 'Sending failed. Please try again.'
-
         },
-
 
         ru: {
-
-            headerTitle:
-                'Привет! Я DAVI 👋',
-
+            headerTitle: 'Привет! Я DAVI 👋',
             headerSubtitle:
                 'Поддержка DeepUp. Быстро и просто.',
-
             homeTitle:
                 'Что не работает?',
-
             homeSubtitle:
                 'Выберите проблему.',
-
             confirmQuestion:
                 'Это ваша проблема?',
-
             yes:
                 '👍 Да',
-
             no:
                 '👎 Нет',
-
             solution:
                 'Решение:',
-
             worked:
                 'Теперь работает?',
-
             workedYes:
                 '✅ Да, работает',
-
             workedNo:
                 '📞 Нет, нужна помощь',
-
             callbackTitle:
                 '📞 Заказать звонок',
-
             callbackSubtitle:
                 'Введите данные, и мы вам поможем.',
-
             name:
                 'Ваше имя',
-
             phone:
                 'Ваш телефон',
-
             serial:
                 'Серийный номер (SN)',
-
             problem:
                 'Кратко опишите проблему',
-
             saturdayNotice:
                 'Сегодня суббота. Можно позвонить в следующий рабочий день или помощь нужна сегодня?',
-
             weekdayOption:
                 '👍 Следующий рабочий день',
-
             saturdayOption:
                 '📞 Помощь нужна сегодня',
-
             send:
                 'Заказать звонок',
-
             sending:
                 'Отправка...',
-
             solvedTitle:
                 'Отлично! 🎉',
-
             solvedText:
                 'DAVI смог вам помочь.',
-
             callbackSentTitle:
                 'Спасибо! 👍',
-
             weekdaySent:
                 'Мы свяжемся с вами в следующий рабочий день.',
-
             saturdaySent:
                 'Дежурная служба свяжется с вами как можно скорее.',
-
             home:
                 'На главную',
-
             footer:
                 '🏗️ DAVI доступен 24/7 – и в выходные.',
-
             fill:
                 'Заполните все поля.',
-
             urgency:
                 'Выберите время обратного звонка.',
-
             error:
                 'Ошибка отправки. Попробуйте ещё раз.'
-
         },
 
-
         tr: {
-
             headerTitle:
                 'Merhaba! Ben DAVI 👋',
-
             headerSubtitle:
                 'DeepUp desteğiniz. Hızlı ve kolay.',
-
             homeTitle:
                 'Ne çalışmıyor?',
-
             homeSubtitle:
                 'Sorununuza dokunun.',
-
             confirmQuestion:
                 'Sorununuz bu mu?',
-
             yes:
                 '👍 Evet',
-
             no:
                 '👎 Hayır',
-
             solution:
                 'Çözüm:',
-
             worked:
                 'Şimdi çalışıyor mu?',
-
             workedYes:
                 '✅ Evet, çalışıyor',
-
             workedNo:
                 '📞 Hayır, yardıma ihtiyacım var',
-
             callbackTitle:
                 '📞 Geri arama iste',
-
             callbackSubtitle:
                 'Bilgilerinizi girin. Size yardımcı olacağız.',
-
             name:
                 'Adınız',
-
             phone:
                 'Telefon numaranız',
-
             serial:
                 'Seri numarası (SN)',
-
             problem:
                 'Sorununuzu kısaca açıklayın',
-
             saturdayNotice:
                 'Bugün Cumartesi. Sonraki iş günü aranmanız yeterli mi, yoksa bugün yardıma mı ihtiyacınız var?',
-
             weekdayOption:
                 '👍 Sonraki iş günü yeterli',
-
             saturdayOption:
                 '📞 Bugün yardıma ihtiyacım var',
-
             send:
                 'Geri arama iste',
-
             sending:
                 'Gönderiliyor...',
-
             solvedTitle:
                 'Harika! 🎉',
-
             solvedText:
                 'DAVI size yardımcı olabildi.',
-
             callbackSentTitle:
                 'Teşekkürler! 👍',
-
             weekdaySent:
                 'Sonraki iş günü sizinle iletişime geçeceğiz.',
-
             saturdaySent:
                 'Nöbetçi servis en kısa sürede sizinle iletişime geçecek.',
-
             home:
                 'Ana sayfa',
-
             footer:
                 '🏗️ DAVI 7/24 – hafta sonları da kullanılabilir.',
-
             fill:
                 'Lütfen tüm alanları doldurun.',
-
             urgency:
                 'Lütfen ne zaman aranmak istediğinizi seçin.',
-
             error:
                 'Gönderim başarısız oldu. Tekrar deneyin.'
-
         }
-
     };
 
 
-
-    /* =====================================================
-       PROBLEME
-    ===================================================== */
-
     const problems = {
-
         de: {
-
-            app:
-            {
+            app: {
                 title: 'App geht nicht auf',
                 small: 'öffnet kurz und schließt wieder',
                 icon: '📱',
-
-                solutions:
-                [
+                solutions: [
                     {
-                        title: 'Scan Device neu starten',
+                        title:
+                            'Scan Device neu starten',
                         text:
                             `Starte dein Scan Device neu. Wie das geht, siehst du <a href="${PDF.reboot}" target="_blank">HIER</a>.`
                     },
-
                     {
-                        title: '5 Minuten warten',
+                        title:
+                            '5 Minuten warten',
                         text:
                             'Warte danach 5 Minuten und öffne die App nochmal.'
                     }
                 ]
             },
 
-
-            appSettings:
-            {
-                title: 'App & Einstellungen gehen nicht auf',
-                small: 'beide Apps schließen sich wieder',
-                icon: '⚙️',
-
-                solutions:
-                [
+            appSettings: {
+                title:
+                    'App & Einstellungen gehen nicht auf',
+                small:
+                    'beide Apps schließen sich wieder',
+                icon:
+                    '⚙️',
+                solutions: [
                     {
-                        title: 'iOS 18 oder höher',
+                        title:
+                            'iOS 18 oder höher',
                         text:
                             `Starte dein Scan Device neu. Die Anleitung findest du <a href="${PDF.reboot18}" target="_blank">HIER</a>.`
                     },
-
                     {
-                        title: 'iOS älter als 18',
+                        title:
+                            'iOS älter als 18',
                         text:
                             'Wenn dein Gerät eine ältere iOS-Version hat, wähle unten „Nein, ich brauche Hilfe“.'
                     }
                 ]
             },
 
-
-            signal:
-            {
-                title: 'Kein Netz / Internet',
-                small: 'keine Verbindung',
-                icon: '🌐',
-
-                solutions:
-                [
+            signal: {
+                title:
+                    'Kein Netz / Internet',
+                small:
+                    'keine Verbindung',
+                icon:
+                    '🌐',
+                solutions: [
                     {
-                        title: 'Standort wechseln',
+                        title:
+                            'Standort wechseln',
                         text:
                             'Geh ein paar Meter weiter oder höher.'
                     },
-
                     {
-                        title: 'Kurz ans Ladekabel',
+                        title:
+                            'Kurz ans Ladekabel',
                         text:
                             'Steck dein Scan Device kurz ans Ladekabel.'
                     },
-
                     {
-                        title: 'Neu starten',
+                        title:
+                            'Neu starten',
                         text:
                             `Starte das Scan Device neu. Anleitung: <a href="${PDF.reboot}" target="_blank">HIER</a>.`
                     }
                 ]
             },
 
-
-            scan:
-            {
-                title: 'Scannen / Kamera geht nicht',
-                small: 'Foto oder Scan funktioniert nicht',
-                icon: '📷',
-
-                solutions:
-                [
+            scan: {
+                title:
+                    'Scannen / Kamera geht nicht',
+                small:
+                    'Foto oder Scan funktioniert nicht',
+                icon:
+                    '📷',
+                solutions: [
                     {
-                        title: 'Kamera sauber machen',
+                        title:
+                            'Kamera sauber machen',
                         text:
                             'Wisch die Kameralinse hinten sauber.'
                     },
-
                     {
-                        title: 'Mehr Licht',
+                        title:
+                            'Mehr Licht',
                         text:
                             'Geh an einen helleren Ort.'
                     },
-
                     {
-                        title: 'Neu starten',
+                        title:
+                            'Neu starten',
                         text:
                             `Starte dein Scan Device neu. Anleitung: <a href="${PDF.reboot}" target="_blank">HIER</a>.`
                     }
                 ]
             },
 
-
-            freeze:
-            {
-                title: 'Scanner hängt',
-                small: 'bei „Berechne Qualität“',
-                icon: '⏳',
-
-                solutions:
-                [
+            freeze: {
+                title:
+                    'Scanner hängt',
+                small:
+                    'bei „Berechne Qualität“',
+                icon:
+                    '⏳',
+                solutions: [
                     {
-                        title: '5–10 Minuten warten',
+                        title:
+                            '5–10 Minuten warten',
                         text:
                             'Manchmal dauert die Berechnung länger.'
                     },
-
                     {
-                        title: 'Neu starten',
+                        title:
+                            'Neu starten',
                         text:
                             `Wenn nichts passiert, starte dein Scan Device neu. Anleitung: <a href="${PDF.reboot}" target="_blank">HIER</a>.`
                     },
-
                     {
-                        title: 'Wichtig',
+                        title:
+                            'Wichtig',
                         text:
                             'Nach dem Neustart musst du den Scan neu machen.'
                     }
                 ]
             },
 
-
-            project:
-            {
-                title: 'Projekt / SMA fehlt',
-                small: 'wird nicht angezeigt',
-                icon: '📋',
-
-                solutions:
-                [
+            project: {
+                title:
+                    'Projekt / SMA fehlt',
+                small:
+                    'wird nicht angezeigt',
+                icon:
+                    '📋',
+                solutions: [
                     {
-                        title: 'Neu starten',
+                        title:
+                            'Neu starten',
                         text:
                             `Starte dein Scan Device neu. Anleitung: <a href="${PDF.reboot}" target="_blank">HIER</a>.`
                     },
-
                     {
-                        title: 'iOS Update prüfen',
+                        title:
+                            'iOS Update prüfen',
                         text:
                             `Prüfe danach das iOS Update. Anleitung: <a href="${PDF.iosUpdate}" target="_blank">HIER</a>.`
                     }
                 ]
             },
 
-
-            qr:
-            {
-                title: 'QR-Code geht nicht',
-                small: 'fehlt oder wird nicht erkannt',
-                icon: '🔳',
-
-                solutions:
-                [
+            qr: {
+                title:
+                    'QR-Code geht nicht',
+                small:
+                    'fehlt oder wird nicht erkannt',
+                icon:
+                    '🔳',
+                solutions: [
                     {
-                        title: 'QR-Code fehlt?',
+                        title:
+                            'QR-Code fehlt?',
                         text:
                             'Frag deinen Auftraggeber nach dem QR-Code.'
                     },
-
                     {
-                        title: 'Kamera sauber machen',
+                        title:
+                            'Kamera sauber machen',
                         text:
                             'Wisch die Kameralinse sauber und probier es bei gutem Licht.'
                     },
-
                     {
-                        title: 'Neu starten',
+                        title:
+                            'Neu starten',
                         text:
                             `Starte dein Scan Device neu. Anleitung: <a href="${PDF.reboot}" target="_blank">HIER</a>.`
                     }
                 ]
             },
 
-
-            update:
-            {
-                title: 'Update machen',
-                small: 'App oder iOS aktualisieren',
-                icon: '⬆️',
-
-                solutions:
-                [
+            update: {
+                title:
+                    'Update machen',
+                small:
+                    'App oder iOS aktualisieren',
+                icon:
+                    '⬆️',
+                solutions: [
                     {
-                        title: 'App Update',
+                        title:
+                            'App Update',
                         text:
                             `So aktualisierst du die App: <a href="${PDF.appUpdate}" target="_blank">HIER</a>.`
                     },
-
                     {
-                        title: 'iOS Update',
+                        title:
+                            'iOS Update',
                         text:
                             `So aktualisierst du iOS: <a href="${PDF.iosUpdate}" target="_blank">HIER</a>.`
                     }
                 ]
             },
 
-
-            locked:
-            {
-                title: 'Scanner gesperrt',
-                small: 'Lost Mode / gesperrtes Gerät',
-                icon: '🔒',
-
-                solutions:
-                [
+            locked: {
+                title:
+                    'Scanner gesperrt',
+                small:
+                    'Lost Mode / gesperrtes Gerät',
+                icon:
+                    '🔒',
+                solutions: [
                     {
-                        title: 'Gerät verloren',
+                        title:
+                            'Gerät verloren',
                         text:
                             'Melde dich bei deinem Auftraggeber. Er muss das Gerät zurücksenden und ein neues bestellen.'
                     },
-
                     {
-                        title: 'Gerät nur gesperrt',
+                        title:
+                            'Gerät nur gesperrt',
                         text:
                             'Wenn das Gerät nicht verloren ist, wähle unten „Nein, ich brauche Hilfe“.'
                     }
                 ]
             },
 
-
-            order:
-            {
-                title: 'Bestellung',
-                small: 'Gerät oder Zubehör',
-                icon: '📦',
-
-                solutions:
-                [
+            order: {
+                title:
+                    'Bestellung',
+                small:
+                    'Gerät oder Zubehör',
+                icon:
+                    '📦',
+                solutions: [
                     {
-                        title: 'Auftraggeber kontaktieren',
+                        title:
+                            'Auftraggeber kontaktieren',
                         text:
                             'Sag deinem Auftraggeber, was du brauchst. Er kann die Bestellung durchführen.'
                     }
                 ]
             },
 
-
-            return:
-            {
-                title: 'Gerät zurücksenden',
-                small: 'Retoure',
-                icon: '↩️',
-
-                solutions:
-                [
+            return: {
+                title:
+                    'Gerät zurücksenden',
+                small:
+                    'Retoure',
+                icon:
+                    '↩️',
+                solutions: [
                     {
-                        title: 'Auftraggeber kontaktieren',
+                        title:
+                            'Auftraggeber kontaktieren',
                         text:
                             'Dein Auftraggeber organisiert die Retoure.'
                     }
                 ]
             }
-
         }
-
     };
 
 
+    problems.en =
+        JSON.parse(JSON.stringify(problems.de));
 
-    /*
-       Für Englisch, Russisch und Türkisch verwenden wir
-       zunächst dieselben Problemstrukturen und übersetzen
-       die wichtigsten Texte automatisch hier.
-    */
+    problems.ru =
+        JSON.parse(JSON.stringify(problems.de));
 
-    problems.en = JSON.parse(JSON.stringify(problems.de));
-    problems.ru = JSON.parse(JSON.stringify(problems.de));
-    problems.tr = JSON.parse(JSON.stringify(problems.de));
+    problems.tr =
+        JSON.parse(JSON.stringify(problems.de));
 
 
     const translatedProblemTitles = {
-
-        en:
-        {
+        en: {
             app:
-                ['App will not open','opens briefly and closes again'],
-
+                ['App will not open', 'opens briefly and closes again'],
             appSettings:
-                ['App & Settings will not open','both apps close again'],
-
+                ['App & Settings will not open', 'both apps close again'],
             signal:
-                ['No network / Internet','no connection'],
-
+                ['No network / Internet', 'no connection'],
             scan:
-                ['Scan / Camera not working','photo or scan does not work'],
-
+                ['Scan / Camera not working', 'photo or scan does not work'],
             freeze:
-                ['Scanner freezes','at "Calculate Quality"'],
-
+                ['Scanner freezes', 'at "Calculate Quality"'],
             project:
-                ['Project / SMA missing','not displayed'],
-
+                ['Project / SMA missing', 'not displayed'],
             qr:
-                ['QR code not working','missing or not recognized'],
-
+                ['QR code not working', 'missing or not recognized'],
             update:
-                ['Update','update app or iOS'],
-
+                ['Update', 'update app or iOS'],
             locked:
-                ['Scanner locked','Lost Mode / locked device'],
-
+                ['Scanner locked', 'Lost Mode / locked device'],
             order:
-                ['Order','device or accessories'],
-
+                ['Order', 'device or accessories'],
             return:
-                ['Return device','return']
+                ['Return device', 'return']
         },
 
-
-        ru:
-        {
+        ru: {
             app:
-                ['Приложение не открывается','открывается и сразу закрывается'],
-
+                ['Приложение не открывается', 'открывается и сразу закрывается'],
             appSettings:
-                ['Приложение и Настройки не открываются','оба приложения закрываются'],
-
+                ['Приложение и Настройки не открываются', 'оба приложения закрываются'],
             signal:
-                ['Нет сети / интернета','нет соединения'],
-
+                ['Нет сети / интернета', 'нет соединения'],
             scan:
-                ['Сканирование / камера не работает','фото или скан не работает'],
-
+                ['Сканирование / камера не работает', 'фото или скан не работает'],
             freeze:
-                ['Сканер завис','при расчёте качества'],
-
+                ['Сканер завис', 'при расчёте качества'],
             project:
-                ['Проект / SMA отсутствует','не отображается'],
-
+                ['Проект / SMA отсутствует', 'не отображается'],
             qr:
-                ['QR-код не работает','отсутствует или не распознаётся'],
-
+                ['QR-код не работает', 'отсутствует или не распознаётся'],
             update:
-                ['Обновление','обновить приложение или iOS'],
-
+                ['Обновление', 'обновить приложение или iOS'],
             locked:
-                ['Сканер заблокирован','Lost Mode / блокировка'],
-
+                ['Сканер заблокирован', 'Lost Mode / блокировка'],
             order:
-                ['Заказ','устройство или аксессуары'],
-
+                ['Заказ', 'устройство или аксессуары'],
             return:
-                ['Вернуть устройство','возврат']
+                ['Вернуть устройство', 'возврат']
         },
 
-
-        tr:
-        {
+        tr: {
             app:
-                ['Uygulama açılmıyor','kısa açılıp tekrar kapanıyor'],
-
+                ['Uygulama açılmıyor', 'kısa açılıp tekrar kapanıyor'],
             appSettings:
-                ['Uygulama ve Ayarlar açılmıyor','iki uygulama da kapanıyor'],
-
+                ['Uygulama ve Ayarlar açılmıyor', 'iki uygulama da kapanıyor'],
             signal:
-                ['Ağ / internet yok','bağlantı yok'],
-
+                ['Ağ / internet yok', 'bağlantı yok'],
             scan:
-                ['Tarama / kamera çalışmıyor','fotoğraf veya tarama çalışmıyor'],
-
+                ['Tarama / kamera çalışmıyor', 'fotoğraf veya tarama çalışmıyor'],
             freeze:
-                ['Tarayıcı donuyor','kalite hesaplanırken'],
-
+                ['Tarayıcı donuyor', 'kalite hesaplanırken'],
             project:
-                ['Proje / SMA eksik','görüntülenmiyor'],
-
+                ['Proje / SMA eksik', 'görüntülenmiyor'],
             qr:
-                ['QR kod çalışmıyor','eksik veya okunmuyor'],
-
+                ['QR kod çalışmıyor', 'eksik veya okunmuyor'],
             update:
-                ['Güncelleme','uygulama veya iOS güncelle'],
-
+                ['Güncelleme', 'uygulama veya iOS güncelle'],
             locked:
-                ['Tarayıcı kilitli','Lost Mode / kilitli cihaz'],
-
+                ['Tarayıcı kilitli', 'Lost Mode / kilitli cihaz'],
             order:
-                ['Sipariş','cihaz veya aksesuar'],
-
+                ['Sipariş', 'cihaz veya aksesuar'],
             return:
-                ['Cihazı iade et','iade']
+                ['Cihazı iade et', 'iade']
         }
-
     };
 
 
-    ['en','ru','tr'].forEach(lang => {
-
-        Object.keys(translatedProblemTitles[lang])
+    ['en', 'ru', 'tr'].forEach(lang => {
+        Object
+            .keys(translatedProblemTitles[lang])
             .forEach(key => {
-
                 problems[lang][key].title =
                     translatedProblemTitles[lang][key][0];
 
                 problems[lang][key].small =
                     translatedProblemTitles[lang][key][1];
-
             });
-
     });
 
 
-
-    /* =====================================================
-       TRACKING
-    ===================================================== */
-
     function track(name, data = {}) {
-
         if (typeof gtag === 'function') {
-
             gtag(
                 'event',
                 name,
@@ -2015,16 +1691,13 @@
                     data
                 )
             );
-
         }
-
     }
 
 
     document.addEventListener(
         'click',
         function(event) {
-
             const link =
                 event.target.closest('a[href*=".pdf"]');
 
@@ -2039,24 +1712,15 @@
                         link.getAttribute('href')
                 }
             );
-
         }
     );
 
 
-
-    /* =====================================================
-       VIEW
-    ===================================================== */
-
     function showView(id) {
-
         document
             .querySelectorAll('.view')
             .forEach(view => {
-
                 view.classList.remove('active');
-
             });
 
         document
@@ -2067,17 +1731,10 @@
             top: 0,
             behavior: 'smooth'
         });
-
     }
 
 
-
-    /* =====================================================
-       LANGUAGE
-    ===================================================== */
-
     function selectLanguage(lang) {
-
         language = lang;
 
         localStorage.setItem(
@@ -2093,94 +1750,135 @@
         );
 
         applyLanguage();
-
         showHome();
-
     }
 
 
     function showLanguageSelection() {
-
         showView('languageView');
 
         document
             .getElementById('languageButton')
             .style.display = 'none';
-
     }
 
 
     function applyLanguage() {
-
         const t = ui[language];
 
-        document.getElementById('headerTitle').textContent =
+        document
+            .getElementById('headerTitle')
+            .textContent =
             t.headerTitle;
 
-        document.getElementById('headerSubtitle').textContent =
+        document
+            .getElementById('headerSubtitle')
+            .textContent =
             t.headerSubtitle;
 
-        document.getElementById('homeTitle').textContent =
+        document
+            .getElementById('homeTitle')
+            .textContent =
             t.homeTitle;
 
-        document.getElementById('homeSubtitle').textContent =
+        document
+            .getElementById('homeSubtitle')
+            .textContent =
             t.homeSubtitle;
 
-        document.getElementById('confirmQuestion').textContent =
+        document
+            .getElementById('confirmQuestion')
+            .textContent =
             t.confirmQuestion;
 
-        document.getElementById('yesProblemButton').textContent =
+        document
+            .getElementById('yesProblemButton')
+            .textContent =
             t.yes;
 
-        document.getElementById('noProblemButton').textContent =
+        document
+            .getElementById('noProblemButton')
+            .textContent =
             t.no;
 
-        document.getElementById('solutionHeader').textContent =
+        document
+            .getElementById('solutionHeader')
+            .textContent =
             t.solution;
 
-        document.getElementById('workedQuestion').textContent =
+        document
+            .getElementById('workedQuestion')
+            .textContent =
             t.worked;
 
-        document.getElementById('workedYesButton').textContent =
+        document
+            .getElementById('workedYesButton')
+            .textContent =
             t.workedYes;
 
-        document.getElementById('workedNoButton').textContent =
+        document
+            .getElementById('workedNoButton')
+            .textContent =
             t.workedNo;
 
-        document.getElementById('callbackTitle').textContent =
+        document
+            .getElementById('callbackTitle')
+            .textContent =
             t.callbackTitle;
 
-        document.getElementById('callbackSubtitle').textContent =
+        document
+            .getElementById('callbackSubtitle')
+            .textContent =
             t.callbackSubtitle;
 
-        document.getElementById('nameLabel').textContent =
+        document
+            .getElementById('nameLabel')
+            .textContent =
             t.name;
 
-        document.getElementById('phoneLabel').textContent =
+        document
+            .getElementById('phoneLabel')
+            .textContent =
             t.phone;
 
-        document.getElementById('serialLabel').textContent =
+        document
+            .getElementById('serialLabel')
+            .textContent =
             t.serial;
 
-        document.getElementById('problemLabel').textContent =
+        document
+            .getElementById('problemLabel')
+            .textContent =
             t.problem;
 
-        document.getElementById('saturdayNotice').textContent =
+        document
+            .getElementById('saturdayNotice')
+            .textContent =
             t.saturdayNotice;
 
-        document.getElementById('weekdayOption').textContent =
+        document
+            .getElementById('weekdayOption')
+            .textContent =
             t.weekdayOption;
 
-        document.getElementById('saturdayOption').textContent =
+        document
+            .getElementById('saturdayOption')
+            .textContent =
             t.saturdayOption;
 
-        document.getElementById('sendButton').textContent =
+        document
+            .getElementById('sendButton')
+            .textContent =
             t.send;
 
-        document.getElementById('successHomeButton').textContent =
+        document
+            .getElementById('successHomeButton')
+            .textContent =
             t.home;
 
-        document.getElementById('footerText').textContent =
+        document
+            .getElementById('footerText')
+            .textContent =
             t.footer;
 
         document
@@ -2188,25 +1886,18 @@
             .style.display = 'block';
 
         buildProblemList();
-
     }
 
 
-
-    /* =====================================================
-       HOME
-    ===================================================== */
-
     function buildProblemList() {
-
         const list =
             document.getElementById('problemList');
 
         list.innerHTML = '';
 
-        Object.keys(problems[language])
+        Object
+            .keys(problems[language])
             .forEach(key => {
-
                 const problem =
                     problems[language][key];
 
@@ -2217,13 +1908,11 @@
                     'problem-btn';
 
                 button.innerHTML = `
-
                     <div class="problem-icon">
                         ${problem.icon}
                     </div>
 
                     <div class="problem-copy">
-
                         <div class="problem-title">
                             ${problem.title}
                         </div>
@@ -2231,59 +1920,50 @@
                         <div class="problem-small">
                             ${problem.small}
                         </div>
-
                     </div>
 
                     <div class="chevron">
                         ›
                     </div>
-
                 `;
 
                 button.onclick =
                     function() {
-
                         openProblem(key);
-
                     };
 
                 list.appendChild(button);
-
             });
-
     }
 
 
     function showHome() {
-
         currentProblemKey = null;
 
         applyLanguage();
-
         showView('homeView');
-
     }
 
 
-
-    /* =====================================================
-       PROBLEM
-    ===================================================== */
-
     function openProblem(key) {
-
         currentProblemKey = key;
 
         const problem =
             problems[language][key];
 
-        document.getElementById('confirmIcon').textContent =
+        document
+            .getElementById('confirmIcon')
+            .textContent =
             problem.icon;
 
-        document.getElementById('confirmTitle').textContent =
+        document
+            .getElementById('confirmTitle')
+            .textContent =
             problem.title;
 
-        document.getElementById('confirmDescription').textContent =
+        document
+            .getElementById('confirmDescription')
+            .textContent =
             problem.small;
 
         track(
@@ -2295,12 +1975,10 @@
         );
 
         showView('confirmView');
-
     }
 
 
     function confirmProblem(answer) {
-
         track(
             'problem_confirmed',
             {
@@ -2310,26 +1988,14 @@
         );
 
         if (answer) {
-
             showSolutions();
-
-        }
-        else {
-
+        } else {
             showHome();
-
         }
-
     }
 
 
-
-    /* =====================================================
-       SOLUTION
-    ===================================================== */
-
     function showSolutions() {
-
         const problem =
             problems[language][currentProblemKey];
 
@@ -2340,7 +2006,6 @@
 
         problem.solutions.forEach(
             function(solution, index) {
-
                 const card =
                     document.createElement('div');
 
@@ -2348,7 +2013,6 @@
                     'solution-card';
 
                 card.innerHTML = `
-
                     <h3>
                         ${index + 1}. ${solution.title}
                     </h3>
@@ -2356,11 +2020,9 @@
                     <p>
                         ${solution.text}
                     </p>
-
                 `;
 
                 container.appendChild(card);
-
             }
         );
 
@@ -2373,12 +2035,10 @@
         );
 
         showView('solutionView');
-
     }
 
 
     function solutionResult(success) {
-
         track(
             'solution_result',
             {
@@ -2390,40 +2050,25 @@
         );
 
         if (success) {
-
             showSuccessSolved();
-
-        }
-        else {
-
+        } else {
             openCallback();
-
         }
-
     }
 
 
-
-    /* =====================================================
-       CALLBACK
-    ===================================================== */
-
     function isSaturday() {
-
         return new Date().getDay() === 6;
-
     }
 
 
     function openCallback() {
-
-        const t =
-            ui[language];
-
         const problem =
             problems[language][currentProblemKey];
 
-        document.getElementById('userProblem').value =
+        document
+            .getElementById('userProblem')
+            .value =
             problem.title;
 
         const saturdayArea =
@@ -2437,26 +2082,21 @@
         document
             .querySelectorAll('input[name="urgency"]')
             .forEach(radio => {
-
                 radio.checked = false;
-
             });
 
         track('callback_form_opened');
 
         showView('callbackView');
-
     }
 
 
     document
         .querySelectorAll('input[name="urgency"]')
         .forEach(radio => {
-
             radio.addEventListener(
                 'change',
                 function() {
-
                     track(
                         'callback_urgency_selected',
                         {
@@ -2464,12 +2104,9 @@
                                 this.value
                         }
                     );
-
                 }
             );
-
         });
-
 
 
     document
@@ -2477,7 +2114,6 @@
         .addEventListener(
             'submit',
             async function(event) {
-
                 event.preventDefault();
 
                 const t =
@@ -2507,43 +2143,33 @@
                         .value
                         .trim();
 
-
                 if (
                     !name ||
                     !phone ||
                     !serial ||
                     !problemText
                 ) {
-
                     alert(t.fill);
                     return;
-
                 }
-
 
                 let urgency =
                     'weekday';
 
-
                 if (isSaturday()) {
-
                     const selected =
                         document.querySelector(
                             'input[name="urgency"]:checked'
                         );
 
                     if (!selected) {
-
                         alert(t.urgency);
                         return;
-
                     }
 
                     urgency =
                         selected.value;
-
                 }
-
 
                 const button =
                     document.getElementById('sendButton');
@@ -2552,31 +2178,20 @@
                 button.textContent =
                     t.sending;
 
-
                 const subject =
-
                     urgency === 'saturday'
-
-                    ? `DAVI Rückruf Samstag Bereitschaft - ${language.toUpperCase()}`
-
-                    : `DAVI Rückruf nächster Werktag - ${language.toUpperCase()}`;
-
+                        ? `DAVI Rückruf Samstag Bereitschaft - ${language.toUpperCase()}`
+                        : `DAVI Rückruf nächster Werktag - ${language.toUpperCase()}`;
 
                 const urgencyText =
-
                     urgency === 'saturday'
-
-                    ? 'heute am Samstag – Bereitschaft'
-
-                    : 'nächster Werktag';
-
+                        ? 'heute am Samstag – Bereitschaft'
+                        : 'nächster Werktag';
 
                 const internalProblem =
                     currentProblemKey || 'unbekannt';
 
-
                 const message = `
-
 DAVI Rückruf
 
 Name: ${name}
@@ -2597,85 +2212,63 @@ ${language.toUpperCase()}
 
 Zeit:
 ${new Date().toLocaleString('de-DE')}
-
                 `.trim();
-
 
                 const formData =
                     new FormData();
-
 
                 formData.append(
                     'access_key',
                     WEB3FORMS_KEY
                 );
 
-
                 formData.append(
                     'name',
                     name
                 );
-
 
                 formData.append(
                     'phone',
                     phone
                 );
 
-
                 formData.append(
                     'message',
                     message
                 );
-
 
                 formData.append(
                     'subject',
                     subject
                 );
 
-
                 formData.append(
                     'from_name',
                     'DAVI Support Bot'
                 );
-
 
                 formData.append(
                     'to',
                     CALLBACK_EMAIL
                 );
 
-
                 try {
-
                     const response =
                         await fetch(
                             'https://api.web3forms.com/submit',
                             {
                                 method:
                                     'POST',
-
                                 body:
                                     formData
                             }
                         );
 
-
                     if (!response.ok) {
-
                         throw new Error(
                             'Web3Forms error'
                         );
-
                     }
-
-
-                    /*
-                       WICHTIG:
-                       Keine Namen, Telefonnummern,
-                       Seriennummern oder Texte an GA senden.
-                    */
 
                     track(
                         'callback_submitted',
@@ -2685,184 +2278,141 @@ ${new Date().toLocaleString('de-DE')}
                         }
                     );
 
-
                     showCallbackSuccess(
                         urgency
                     );
 
-
-                }
-                catch(error) {
-
+                } catch (error) {
                     console.error(error);
 
                     alert(t.error);
 
                     button.disabled = false;
-
                     button.textContent =
                         t.send;
-
                 }
-
             }
         );
 
 
-
-    /* =====================================================
-       SUCCESS
-    ===================================================== */
-
     function showSuccessSolved() {
-
         const t =
             ui[language];
 
-        document.getElementById('successIcon').textContent =
+        document
+            .getElementById('successIcon')
+            .textContent =
             '✅';
 
-        document.getElementById('successTitle').textContent =
+        document
+            .getElementById('successTitle')
+            .textContent =
             t.solvedTitle;
 
-        document.getElementById('successText').textContent =
+        document
+            .getElementById('successText')
+            .textContent =
             t.solvedText;
 
         showView('successView');
-
     }
 
 
     function showCallbackSuccess(urgency) {
-
         const t =
             ui[language];
 
-        document.getElementById('successIcon').textContent =
+        document
+            .getElementById('successIcon')
+            .textContent =
             '📞';
 
-        document.getElementById('successTitle').textContent =
+        document
+            .getElementById('successTitle')
+            .textContent =
             t.callbackSentTitle;
 
-        document.getElementById('successText').textContent =
-
+        document
+            .getElementById('successText')
+            .textContent =
             urgency === 'saturday'
-
-            ? t.saturdaySent
-
-            : t.weekdaySent;
-
+                ? t.saturdaySent
+                : t.weekdaySent;
 
         showView('successView');
-
     }
 
 
-
-    /* =====================================================
-       LEGAL
-    ===================================================== */
-
     function showLegal(type) {
-
         const modal =
             document.getElementById(
                 type + 'Modal'
             );
 
         modal.classList.add('active');
-
         document.body.style.overflow =
             'hidden';
-
     }
 
 
     function closeLegal(type) {
-
         const modal =
             document.getElementById(
                 type + 'Modal'
             );
 
         modal.classList.remove('active');
-
         document.body.style.overflow =
             '';
-
     }
 
-
-
-    /* =====================================================
-       START
-    ===================================================== */
 
     document.addEventListener(
         'DOMContentLoaded',
         function() {
-
             const savedLanguage =
                 localStorage.getItem(
                     'davi_language'
                 );
 
-
             if (
                 savedLanguage &&
                 ui[savedLanguage]
             ) {
-
                 language =
                     savedLanguage;
 
                 applyLanguage();
-
                 showHome();
-
-            }
-            else {
-
+            } else {
                 showLanguageSelection();
-
             }
-
         }
     );
 
 
-
-    /* =====================================================
-       SERVICE WORKER
-    ===================================================== */
-
     if ('serviceWorker' in navigator) {
-
         window.addEventListener(
             'load',
             function() {
-
                 navigator
                     .serviceWorker
-                    .register(
-                        './service-worker.js'
-                    )
-                    .catch(
-                        function(error) {
-
-                            console.log(
-                                'Service Worker Fehler:',
-                                error
-                            );
-
-                        }
-                    );
-
+                    .register('./service-worker.js')
+                    .then(function(registration) {
+                        console.log(
+                            'DAVI Service Worker aktiv:',
+                            registration.scope
+                        );
+                    })
+                    .catch(function(error) {
+                        console.log(
+                            'Service Worker Fehler:',
+                            error
+                        );
+                    });
             }
         );
-
     }
-
 </script>
 
 </body>
