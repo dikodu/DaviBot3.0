@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#1DD1A1">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="DAVI">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -119,5 +125,18 @@
 
   </div>
 
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(function(registration) {
+          console.log('DAVI Service Worker aktiv:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Service Worker Fehler:', error);
+        });
+    });
+  }
+</script>
 </body>
 </html>
